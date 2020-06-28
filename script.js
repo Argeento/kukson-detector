@@ -8,7 +8,7 @@ async function init() {
   model = await tmImage.load(modelURL, metadataURL)
   maxPredictions = model.getTotalClasses()
 
-  webcam = new tmImage.Webcam(200, 200, true) // width, height, flip
+  webcam = new tmImage.Webcam(200, 200, false) // width, height, flip
   await webcam.setup({
     facingMode: "environment"
   })
