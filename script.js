@@ -2,8 +2,8 @@ const predictionEl = document.querySelector('#prediction')
 let model, webcam, maxPredictions
 
 async function init() {
-  const modelURL = '/model/model.json'
-  const metadataURL = '/model/metadata.json'
+  const modelURL = './model/model.json'
+  const metadataURL = './model/metadata.json'
 
   model = await tmImage.load(modelURL, metadataURL)
   maxPredictions = model.getTotalClasses()
