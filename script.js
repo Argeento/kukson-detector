@@ -31,9 +31,7 @@ async function predict() {
   predictions.sort((a, b) => a.probability - b.probability < 0 ? 1 : -1)
   const prediction = predictions[0]
 
-  predictionEl.textContent = prediction.probability > 0.7
-    ? `${prediction.className} (${prediction.probability * 100 >> 0}%)`
-    : 'Not a cat'
+  predictionEl.textContent = `${prediction.className} (${prediction.probability * 100 >> 0}%)`
 }
 
 // window.addEventListener('click', () => init())
